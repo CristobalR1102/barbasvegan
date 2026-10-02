@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090a0f">
+  <title>Barbas Vegan | Food Truck 100% Vegano en Santiago</title>
+  <meta name="description" content="Food truck de comida callejera 100% vegana en Santiago. Seitán artesanal, sándwiches con papas, completos, papas supremas y promociones para compartir.">
+  <meta name="keywords" content="food truck vegano, barbas vegan, comida vegana callejera, sandwich vegano, completos veganos, santiago chile, seitán artesanal">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Barbas Vegan | Food Truck 100% Vegano">
+  <meta property="og:description" content="Comida callejera sin crueldad animal. Sándwiches, completos, papas supremas y promociones para compartir.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#090a0f',
+            brandCard: '#12141c',
+            brandSurface: '#1e2230',
+            neonGreen: '#00ff87',
+            electricPurple: '#b026ff',
+            purpleLight: '#c084fc',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            bebas: ['Bebas Neue', 'Impact', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brandDark text-white antialiased font-body">
+
+  <!-- SVG icon sprite (Lucide-style, 2px stroke) -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+      <symbol id="i-nav" viewBox="0 0 24 24"><path d="m3 11 19-9-9 19-2-8-8-2z"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.5 9.5c.3 1.6 1.4 3.2 3 4 .6.3 1.3.3 1.8-.2l.4-.4"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    </defs>
+  </svg>
+
+  <a href="#carta" class="skip-link">Saltar a la carta</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+
+      <a href="#inicio" class="flex items-center gap-2.5 min-w-0" aria-label="Barbas Vegan, ir al inicio">
+        <img src="assets/images/logo.png" alt="" width="40" height="40" class="w-10 h-10 rounded-xl border border-white/15 shrink-0">
+        <span class="min-w-0 leading-none">
+          <span class="font-display font-extrabold text-base sm:text-[17px] tracking-tight block">BARBAS<span class="text-neonGreen">.</span>VEGAN</span>
+          <span class="status-chip mt-1" data-open-chip>
+            <span class="status-dot" data-open-dot></span>
+            <span data-open-status>Food Truck</span>
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-semibold" aria-label="Principal">
+        <a href="#carta" class="nav-link" data-spy="carta">Carta</a>
+        <a href="#promos-destacadas" class="nav-link" data-spy="promos-destacadas">Favoritos</a>
+        <a href="#seitan" class="nav-link" data-spy="seitan">Seitán</a>
+        <a href="#manifiesto" class="nav-link" data-spy="manifiesto">Nosotros</a>
+        <a href="#ubicacion" class="nav-link" data-spy="ubicacion">Ubicación</a>
+      </nav>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="https://instagram.com/barbasvegan" target="_blank" rel="noopener noreferrer" class="icon-btn hidden sm:inline-flex" aria-label="Instagram de Barbas Vegan">
+          <svg class="w-5 h-5"><use href="#i-insta"/></svg>
+        </a>
+        <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="icon-btn icon-btn--wa" aria-label="Escribir por WhatsApp">
+          <svg class="w-5 h-5"><use href="#i-wa"/></svg>
+        </a>
+        <button type="button" class="btn-open-cart hidden md:inline-flex header-cart" aria-label="Ver pedido">
+          <svg class="w-5 h-5" aria-hidden="true"><use href="#i-bag"/></svg>
+          <span>Pedido</span>
+          <span class="cart-badge-count count-pill hidden">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10 sm:pt-12 lg:grid lg:grid-cols-12 lg:gap-10 lg:items-center">
+
+        <div class="lg:col-span-7">
+          <div class="flex flex-wrap items-center gap-2 mb-5 reveal">
+            <span class="pill pill--green"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-leaf"/></svg>100% plant-based</span>
+            <span class="pill"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-pin"/></svg>Santiago, Chile</span>
+          </div>
+
+          <h1 class="hero-title reveal">
+            <span class="block">Sabor</span>
+            <span class="block">callejero</span>
+            <span class="block hero-title__row">
+              <span class="text-outline">100%</span>
+              <!-- Rotating sticker (mobile placement) -->
+              <span class="sticker lg:hidden" aria-hidden="true">
+                <svg viewBox="0 0 100 100" class="sticker__ring">
+                  <defs><path id="circlePathM" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+                  <text textLength="236" lengthAdjust="spacing"><textPath href="#circlePathM" textLength="236" lengthAdjust="spacing">SEITÁN ARTESANAL • CERO CRUELDAD • </textPath></text>
+                </svg>
+                <img src="assets/images/logo.png" alt="" class="sticker__logo" width="64" height="64">
+              </span>
+            </span>
+            <span class="block text-neonGreen hero-title__accent">vegano</span>
+          </h1>
+
+          <p class="text-slate-300 text-[17px] sm:text-xl leading-relaxed max-w-xl mt-5 reveal">
+            Sándwiches gigantes con papas, completos cargados, seitán de receta propia y papas supremas. Todo sin ingredientes de origen animal.
+          </p>
+
+          <div class="mt-7 grid grid-cols-1 sm:flex gap-3 reveal">
+            <a href="#carta" class="btn btn--primary">
+              Ver la carta
+              <svg class="w-5 h-5" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+            <button type="button" class="btn btn--ghost btn-open-cart">
+              <svg class="w-5 h-5" aria-hidden="true"><use href="#i-bag"/></svg>
+              Armar mi pedido
+            </button>
+          </div>
+
+          <!-- Stats strip -->
+          <dl class="stats reveal">
+            <div><dt>Ingredientes animales</dt><dd class="text-neonGreen">0</dd></div>
+            <div><dt>Seitán</dt><dd>Casero</dd></div>
+            <div><dt>Sándwiches</dt><dd class="text-purpleLight">+Papas</dd></div>
+          </dl>
+        </div>
+
+        <!-- Desktop visual -->
+        <div class="hidden lg:flex lg:col-span-5 justify-center">
+          <div class="hero-visual">
+            <svg viewBox="0 0 100 100" class="hero-visual__ring" aria-hidden="true">
+              <defs><path id="circlePathD" d="M50,50 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+              <text textLength="274" lengthAdjust="spacing"><textPath href="#circlePathD" textLength="274" lengthAdjust="spacing">100% VEGANO • SEITÁN ARTESANAL • CERO CRUELDAD • </textPath></text>
+            </svg>
+            <img src="assets/images/logo.png" alt="Logo de Barbas Vegan" class="hero-visual__logo" width="320" height="320">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TILTED TICKER ===================== -->
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker ticker--green">
+        <div class="ticker__track">
+          <span>100% Vegano</span><i>✺</i><span>Seitán artesanal</span><i>✺</i><span>Palta fresca</span><i>✺</i><span>Mayo vegan casera</span><i>✺</i><span>Papas crujientes</span><i>✺</i>
+          <span>100% Vegano</span><i>✺</i><span>Seitán artesanal</span><i>✺</i><span>Palta fresca</span><i>✺</i><span>Mayo vegan casera</span><i>✺</i><span>Papas crujientes</span><i>✺</i>
+        </div>
+      </div>
+      <div class="ticker ticker--purple">
+        <div class="ticker__track ticker__track--reverse">
+          <span>Cero crueldad</span><i>✺</i><span>Seitán para llevar</span><i>✺</i><span>Para compartir</span><i>✺</i><span>Cheddar vegano</span><i>✺</i><span>Pedidos por WhatsApp</span><i>✺</i>
+          <span>Cero crueldad</span><i>✺</i><span>Seitán para llevar</span><i>✺</i><span>Para compartir</span><i>✺</i><span>Cheddar vegano</span><i>✺</i><span>Pedidos por WhatsApp</span><i>✺</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== FAVORITOS ===================== -->
+    <section id="promos-destacadas" class="section pt-14">
+      <div class="max-w-7xl mx-auto">
+        <div class="px-4 sm:px-6 lg:px-8 flex items-end justify-between gap-4 mb-6 reveal">
+          <div>
+            <p class="eyebrow">Los más pedidos</p>
+            <h2 class="section-title">Favoritos<br class="sm:hidden"> de la casa</h2>
+          </div>
+          <p class="text-sm text-slate-400 font-semibold whitespace-nowrap md:hidden" aria-hidden="true">Desliza <svg class="inline w-4 h-4 -mt-0.5"><use href="#i-arrow"/></svg></p>
+        </div>
+
+        <div class="fav-rail" id="fav-rail" tabindex="0" aria-label="Platos favoritos">
+
+          <article class="fav-card fav-card--purple">
+            <div class="fav-card__top">
+              <span class="fav-card__num">01</span>
+              <span class="badge-sticker badge-yellow">Promo de la semana</span>
+            </div>
+            <h3 class="fav-card__title">Promo del Proletariado</h3>
+            <p class="fav-card__desc">Dos sándwiches contundentes con la receta especial de la semana. El mejor precio para compartir.</p>
+            <div class="fav-card__foot">
+              <span class="price-xl">$6.500</span>
+              <button type="button" class="btn-add" data-add-item="promo-proletariado" aria-label="Agregar Promo del Proletariado al pedido">
+                <svg class="w-5 h-5" aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="fav-card fav-card--green">
+            <div class="fav-card__top">
+              <span class="fav-card__num">02</span>
+              <span class="badge-sticker badge-green">Para 3 personas</span>
+            </div>
+            <h3 class="fav-card__title">Papas Vegellana</h3>
+            <p class="fav-card__desc">Papas fritas, seitán de la casa, champiñones, cheddar vegano, pimientos, cebolla grillada, aceitunas y mayo vegan.</p>
+            <div class="fav-card__foot">
+              <span class="price-xl">$7.000</span>
+              <button type="button" class="btn-add" data-add-item="vegellana" aria-label="Agregar Papas Vegellana al pedido">
+                <svg class="w-5 h-5" aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="fav-card fav-card--dark">
+            <div class="fav-card__top">
+              <span class="fav-card__num">03</span>
+              <span class="badge-sticker badge-purple">Clásico chileno</span>
+            </div>
+            <h3 class="fav-card__title">Italiano con papas</h3>
+            <p class="fav-card__desc">Seitán artesanal dorado a la plancha, palta hass molida, tomate en cubos y mayonesa vegana casera.</p>
+            <div class="fav-card__foot">
+              <span class="price-xl">$6.790</span>
+              <button type="button" class="btn-add" data-add-item="italiano" aria-label="Agregar Italiano al pedido">
+                <svg class="w-5 h-5" aria-hidden="true"><use href="#i-plus"/></svg><span>Agregar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+        <div class="rail-progress md:hidden" aria-hidden="true"><span id="rail-progress-bar"></span></div>
+      </div>
+    </section>
+
+    <!-- ===================== CARTA ===================== -->
+    <section id="carta" class="section" tabindex="-1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Carta completa</p>
+          <h2 class="section-title">La carta</h2>
+          <p class="text-slate-300 text-[15px] sm:text-base mt-3 max-w-2xl leading-relaxed">
+            Todos los sándwiches vienen con papas fritas. Varios los puedes pedir en formato <strong class="text-white">As</strong> (con seitán), <strong class="text-white">Salchicha</strong> (con vienesa vegana) o <strong class="text-white">Champipleto</strong> (con champiñones). Arma tu pedido y lo envías por WhatsApp.
+          </p>
+        </div>
+
+        <!-- Sticky toolbar -->
+        <div class="menu-toolbar" id="menu-toolbar">
+          <div class="search-field">
+            <svg class="search-field__icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <label for="search-input" class="sr-only">Buscar en la carta</label>
+            <input type="search" id="search-input" autocomplete="off" enterkeyhint="search"
+              placeholder="Busca: palta, seitán, cheddar…">
+            <button id="search-clear" type="button" class="search-field__clear hidden" aria-label="Borrar búsqueda">
+              <svg class="w-4 h-4" aria-hidden="true"><use href="#i-x"/></svg>
+            </button>
+          </div>
+
+          <div class="chips-row">
+            <div class="chips scrollbar-none" id="categories-container" role="group" aria-label="Categorías"></div>
+          </div>
+          <p class="sr-only" id="items-count" aria-live="polite"></p>
+        </div>
+
+        <!-- Menu Grid -->
+        <div id="menu-grid" class="menu-grid"></div>
+
+        <!-- Scanned menu callout -->
+        <button type="button" class="btn-open-original-menu scan-callout reveal">
+          <span class="scan-callout__thumb">
+            <img src="assets/images/carta-original.png" alt="" loading="lazy">
+          </span>
+          <span class="flex-1 min-w-0 text-left">
+            <span class="block font-display font-bold text-base sm:text-lg text-white">Ver la carta física</span>
+            <span class="block text-slate-400 text-sm mt-0.5">La hoja escaneada con la que atendemos en el food truck.</span>
+          </span>
+          <svg class="w-5 h-5 text-neonGreen shrink-0" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ===================== SEITÁN PARA COCINAR ===================== -->
+    <section id="seitan" class="section" aria-labelledby="seitan-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="shop">
+          <div class="shop__intro reveal">
+            <p class="eyebrow">Para cocinar en casa</p>
+            <h2 class="section-title" id="seitan-title">Llévate nuestro<br><span class="text-neonGreen">seitán</span></h2>
+            <p class="text-slate-300 text-[15px] sm:text-base mt-3 max-w-xl leading-relaxed">
+              El mismo seitán artesanal que usamos en el food truck, listo para que lo prepares a tu manera. Agrégalo a tu pedido y lo retiras junto a tu comida.
+            </p>
+            <div class="shop__ideas" id="seitan-ideas" aria-label="Ideas para prepararlo"></div>
+          </div>
+
+          <div class="shop__grid" id="seitan-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MANIFIESTO / BENTO ===================== -->
+    <section id="manifiesto" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Nuestra filosofía</p>
+          <h2 class="section-title">Comer consciente,<br><span class="text-neonGreen">sin perder el sabor</span></h2>
+        </div>
+
+        <div class="bento">
+          <div class="bento__tile bento__tile--hero reveal">
+            <svg class="w-8 h-8 text-black/80" aria-hidden="true"><use href="#i-heart"/></svg>
+            <p class="bento__big">0% animal<br>100% bajón</p>
+            <p class="text-black/75 text-[15px] font-semibold leading-snug">Comida callejera contundente, completamente libre de crueldad animal.</p>
+          </div>
+
+          <div class="bento__tile bento__tile--purple reveal">
+            <svg class="w-7 h-7 text-purpleLight" aria-hidden="true"><use href="#i-flame"/></svg>
+            <p class="bento__label">Seitán de la casa</p>
+            <p class="text-slate-300 text-sm leading-snug">Lo preparamos nosotros, sazonado para que quede jugoso en cada italiano o chacarero.</p>
+          </div>
+
+          <div class="bento__tile reveal">
+            <svg class="w-7 h-7 text-neonGreen" aria-hidden="true"><use href="#i-sprout"/></svg>
+            <p class="bento__label">Mayos y quesos vegetales</p>
+            <p class="text-slate-300 text-sm leading-snug">Salsas y quesos preparados con dedicación, sin lácteos ni huevo.</p>
+          </div>
+
+          <div class="bento__tile bento__tile--outline reveal">
+            <p class="bento__num">+ papas</p>
+            <p class="text-slate-300 text-sm leading-snug">Todos los sándwiches vienen acompañados de papas fritas.</p>
+          </div>
+
+          <div class="bento__tile bento__tile--quote reveal">
+            <p class="font-display font-bold text-lg sm:text-xl leading-snug text-white">“Comida contundente, fresca y para disfrutar entre amigos. Te esperamos en el food truck.”</p>
+            <p class="text-sm text-slate-400 mt-3 font-semibold">— Equipo Barbas Vegan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== UBICACIÓN ===================== -->
+    <section id="ubicacion" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Punto de encuentro</p>
+          <h2 class="section-title">¿Dónde está<br>el food truck?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+
+          <!-- Map card -->
+          <div class="lg:col-span-7 lg:order-2 map-card reveal">
+            <iframe
+              title="Ubicación de Barbas Vegan en Google Maps"
+              src="https://maps.google.com/maps?q=-33.5090364,-70.7569641&z=16&hl=es&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+            <div class="map-card__bar">
+              <div class="min-w-0">
+                <p class="font-bold text-white text-sm truncate">Barbas Vegan</p>
+                <p class="text-slate-400 text-xs">Santiago, Chile</p>
+              </div>
+              <a href="https://www.google.com/maps/place/Barbas+Vegan/@-33.5090319,-70.759539,946m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9662ddf115c2b09f:0x824d7de96b1cfdf0!8m2!3d-33.5090364!4d-70.7569641!16s%2Fg%2F11qfqvmzd8?hl=es-419" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                <svg class="w-4 h-4" aria-hidden="true"><use href="#i-nav"/></svg>
+                Cómo llegar
+              </a>
+            </div>
+          </div>
+
+          <!-- Info column -->
+          <div class="lg:col-span-5 lg:order-1 space-y-4">
+
+            <div class="info-card reveal">
+              <div class="flex items-center justify-between gap-3 mb-3">
+                <h3 class="info-card__title"><svg class="w-5 h-5 text-neonGreen" aria-hidden="true"><use href="#i-clock"/></svg>Horario</h3>
+                <span class="status-chip status-chip--lg" data-open-chip>
+                  <span class="status-dot" data-open-dot></span>
+                  <span data-open-status>—</span>
+                </span>
+              </div>
+              <dl class="hours">
+                <div data-days="1,2,3,4,5"><dt>Lunes a viernes</dt><dd>12:00 – 20:00</dd></div>
+                <div data-days="6"><dt>Sábado</dt><dd>13:00 – 17:00</dd></div>
+                <div data-days="0"><dt>Domingo</dt><dd class="text-slate-500">Cerrado</dd></div>
+              </dl>
+            </div>
+
+            <div class="info-card reveal">
+              <h3 class="info-card__title mb-2"><svg class="w-5 h-5 text-purpleLight" aria-hidden="true"><use href="#i-card"/></svg>Medios de pago</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="pill">Efectivo</span>
+                <span class="pill">Transferencia</span>
+                <span class="pill">Débito</span>
+                <span class="pill">Crédito</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/56912345678?text=Hola%20Barbas%20Vegan!%20Quiero%20dejar%20un%20pedido%20listo%20para%20pasar%20a%20retirar" target="_blank" rel="noopener noreferrer" class="wa-card reveal">
+              <span class="wa-card__icon"><svg class="w-6 h-6" aria-hidden="true"><use href="#i-wa"/></svg></span>
+              <span class="flex-1 min-w-0">
+                <span class="block font-display font-bold text-white">Deja tu pedido listo</span>
+                <span class="block text-sm text-emerald-100/80">Escríbenos por WhatsApp antes de pasar</span>
+              </span>
+              <svg class="w-5 h-5 text-white shrink-0" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEÑAS ===================== -->
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="max-w-7xl mx-auto">
+        <div class="px-4 sm:px-6 lg:px-8 mb-6 reveal">
+          <p class="eyebrow">Opiniones reales</p>
+          <h2 class="section-title" id="reviews-title">La voz del barrio</h2>
+        </div>
+
+        <div class="review-rail" tabindex="0" aria-label="Opiniones de clientes">
+          <figure class="review-card">
+            <div class="stars" role="img" aria-label="5 de 5 estrellas">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“La Promo del Proletariado es perfecta para compartir. El seitán tiene una textura increíble y la palta es de verdad, fresca y cremosa.”</blockquote>
+            <figcaption><span class="avatar">C</span><span><b>Camilo R.</b><small>Cliente frecuente</small></span></figcaption>
+          </figure>
+          <figure class="review-card review-card--accent">
+            <div class="stars" role="img" aria-label="5 de 5 estrellas">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“Pedimos la Vegellana para compartir entre tres y quedamos listos. El queso vegano derretido con los champiñones es una maravilla.”</blockquote>
+            <figcaption><span class="avatar avatar--purple">V</span><span><b>Valentina M.</b><small>Vegana hace 6 años</small></span></figcaption>
+          </figure>
+          <figure class="review-card">
+            <div class="stars" role="img" aria-label="5 de 5 estrellas">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“El sándwich Fauna con papas al hilo y cheddar vegano no tiene comparación. Y la atención en el food truck es excelente.”</blockquote>
+            <figcaption><span class="avatar">I</span><span><b>Ignacio S.</b><small>Santiago Centro</small></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="footer-mega" aria-hidden="true">BARBAS<span class="text-neonGreen">.</span>VEGAN</p>
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-6 border-t border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="" width="44" height="44" class="w-11 h-11 rounded-xl" loading="lazy">
+          <div>
+            <p class="font-display font-bold text-white">Barbas Vegan · Food Truck</p>
+            <p class="text-slate-400 text-sm">Comida callejera 100% vegana</p>
+          </div>
+        </div>
+        <nav class="grid grid-cols-2 sm:flex gap-2 text-sm font-semibold" aria-label="Pie de página">
+          <a href="#carta" class="footer-link">Carta</a>
+          <a href="#ubicacion" class="footer-link">Horarios</a>
+          <a href="https://instagram.com/barbasvegan" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+          <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp</a>
+        </nav>
+      </div>
+      <p class="text-slate-500 text-xs mt-6">© 2026 Barbas Vegan. Comida callejera plant-based.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== MOBILE DOCK ===================== -->
+  <nav class="dock md:hidden" aria-label="Navegación rápida">
+    <a href="#inicio" class="dock__item" data-spy="inicio">
+      <svg aria-hidden="true"><use href="#i-leaf"/></svg><span>Inicio</span>
+    </a>
+    <a href="#carta" class="dock__item" data-spy="carta">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg><span>Carta</span>
+    </a>
+    <a href="#ubicacion" class="dock__item" data-spy="ubicacion">
+      <svg aria-hidden="true"><use href="#i-pin"/></svg><span>Mapa</span>
+    </a>
+    <button type="button" class="btn-open-cart dock__cart" id="dock-cart" aria-label="Ver pedido">
+      <span class="dock__cart-icon">
+        <svg aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="cart-badge-count dock__badge hidden">0</span>
+      </span>
+      <span class="dock__cart-text">
+        <span class="dock__cart-label">Pedido</span>
+        <span class="dock__cart-total" data-cart-total>$0</span>
+      </span>
+    </button>
+  </nav>
+
+  <!-- ===================== CART (bottom sheet / drawer) ===================== -->
+  <div id="cart-overlay" class="cart-drawer-overlay" aria-hidden="true"></div>
+
+  <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="sheet-handle md:hidden" aria-hidden="true"></div>
+
+    <div class="px-5 pt-3 pb-4 md:pt-5 flex items-center justify-between gap-3 border-b border-white/10">
+      <div>
+        <h2 id="cart-title" class="font-bebas text-4xl leading-none">Tu pedido</h2>
+        <p class="text-xs text-slate-400 mt-1" id="cart-subtitle">Se envía directo por WhatsApp</p>
+      </div>
+      <button id="btn-close-cart" type="button" class="icon-btn" aria-label="Cerrar pedido">
+        <svg class="w-5 h-5" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto overscroll-contain p-4 space-y-2.5" id="cart-items-list"></div>
+
+    <div id="cart-empty-state" class="hidden flex-1 flex flex-col items-center justify-center text-center px-8 py-10">
+      <span class="empty-icon"><svg class="w-8 h-8" aria-hidden="true"><use href="#i-bag"/></svg></span>
+      <h3 class="font-display font-bold text-lg text-white mt-4">Tu pedido está vacío</h3>
+      <p class="text-sm text-slate-400 mt-1 mb-5">Agrega tus platos favoritos de la carta.</p>
+      <a href="#carta" class="btn btn--primary btn--sm" data-close-cart>Ir a la carta</a>
+    </div>
+
+    <div id="cart-footer" class="cart-footer">
+      <details class="cart-extra">
+        <summary>Nombre y comentarios <span class="text-slate-500 font-medium">(opcional)</span></summary>
+        <div class="space-y-3 pt-3">
+          <div>
+            <label class="field-label" for="customer-name">Tu nombre</label>
+            <input type="text" id="customer-name" autocomplete="given-name" placeholder="Ej: Valentina" class="field">
+          </div>
+          <div>
+            <label class="field-label" for="order-notes">Comentarios o alergias</label>
+            <input type="text" id="order-notes" placeholder="Ej: sin mayo, salsa aparte…" class="field">
+          </div>
+        </div>
+      </details>
+
+      <div class="flex items-end justify-between gap-3">
+        <span class="text-sm font-semibold text-slate-300">Total</span>
+        <span class="price-xl text-neonGreen" id="cart-total-amount">$0</span>
+      </div>
+
+      <button type="button" id="btn-send-whatsapp" class="btn-whatsapp-order">
+        <svg class="w-5 h-5" aria-hidden="true"><use href="#i-wa"/></svg>
+        <span>Enviar por WhatsApp</span>
+      </button>
+      <p class="text-[12px] text-center text-slate-500">Se abrirá WhatsApp con el detalle para confirmar con el food truck.</p>
+    </div>
+  </aside>
+
+  <!-- ===================== TYPE PICKER (As / Salchicha / Champipleto) ===================== -->
+  <div id="type-picker-overlay" class="cart-drawer-overlay picker-overlay" aria-hidden="true"></div>
+  <div id="type-picker" class="picker" role="dialog" aria-modal="true" aria-labelledby="type-picker-title" aria-hidden="true">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="px-5 pt-3 pb-2 flex items-start justify-between gap-3">
+      <div>
+        <p class="eyebrow" id="type-picker-item">Italiano</p>
+        <h2 id="type-picker-title" class="font-bebas text-4xl leading-none">¿Cuál quieres?</h2>
+      </div>
+      <button type="button" class="icon-btn" id="type-picker-close" aria-label="Cancelar">
+        <svg class="w-5 h-5" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+    <div class="picker__options" id="type-picker-options"></div>
+  </div>
+
+  <!-- ===================== SCANNED MENU MODAL ===================== -->
+  <div id="original-menu-modal" class="image-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="scan-title" aria-hidden="true">
+    <div class="image-modal-content">
+      <div class="flex items-center justify-between gap-3 p-4 border-b border-white/10">
+        <div>
+          <h2 id="scan-title" class="font-display font-bold text-lg text-white">Carta física</h2>
+          <p class="text-xs text-slate-400">Fotografía del menú del food truck</p>
+        </div>
+        <button id="btn-close-original-menu" type="button" class="icon-btn" aria-label="Cerrar carta física">
+          <svg class="w-5 h-5" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+      <div class="overflow-auto p-3 bg-black/40">
+        <img src="assets/images/carta-original.png" alt="Carta original de Barbas Vegan" class="w-full h-auto rounded-lg" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090a0f">
+  <title>Barbas Vegan | Seitán artesanal por mayor y al detalle</title>
+  <meta name="description" content="Seitán artesanal 100% vegano en Santiago. Para restaurantes, locales y personas: laminado, medallones, rub y parrillero, en paquetes de 0,5, 1 y 3 kg. Pide tu cotización.">
+  <meta name="keywords" content="seitán, seitán artesanal, seitán por mayor, seitán santiago, seitán laminado, seitán parrillero, proteína vegetal, barbas vegan, seitán para restaurantes, horeca">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Barbas Vegan | Seitán artesanal por mayor y al detalle">
+  <meta property="og:description" content="Seitán artesanal 100% vegano para restaurantes, locales y personas. Pide tu cotización.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#090a0f',
+            brandCard: '#12141c',
+            brandSurface: '#1e2230',
+            neonGreen: '#00ff87',
+            electricPurple: '#b026ff',
+            purpleLight: '#c084fc',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            bebas: ['Bebas Neue', 'Impact', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brandDark text-white antialiased font-body">
+
+  <!-- SVG icon sprite (Lucide-style, 2px stroke) -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.850-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+      <symbol id="i-nav" viewBox="0 0 24 24"><path d="m3 11 19-9-9 19-2-8-8-2z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M15.5 3v2.5A4.5 4.5 0 0 0 20 10"/><path d="M15.5 3v11.5a5 5 0 1 1-5-5"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.5 9.5c.3 1.6 1.4 3.2 3 4 .6.3 1.3.3 1.8-.2l.4-.4"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+    </defs>
+  </svg>
+
+  <a href="#cotizar" class="skip-link">Ir al formulario de cotización</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+
+      <a href="#inicio" class="flex items-center gap-2.5 min-w-0" aria-label="Barbas Vegan, ir al inicio">
+        <img src="assets/images/logo.png" alt="" width="40" height="40" class="w-10 h-10 rounded-xl border border-white/15 shrink-0">
+        <span class="min-w-0 leading-none">
+          <span class="font-display font-extrabold text-base sm:text-[17px] tracking-tight block">BARBAS<span class="text-neonGreen">.</span>VEGAN</span>
+          <span class="block mt-1 text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Seitán artesanal</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1 text-sm font-semibold" aria-label="Principal">
+        <a href="#formatos" class="nav-link" data-spy="formatos">Formatos</a>
+        <a href="#para-quien" class="nav-link" data-spy="para-quien">Para quién</a>
+        <a href="#manifiesto" class="nav-link" data-spy="manifiesto">Nosotros</a>
+        <a href="#ubicacion" class="nav-link" data-spy="ubicacion">Ubicación</a>
+      </nav>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="https://instagram.com/barbasvegan" target="_blank" rel="noopener noreferrer" class="icon-btn hidden sm:inline-flex" aria-label="Instagram de Barbas Vegan">
+          <svg class="w-5 h-5"><use href="#i-insta"/></svg>
+        </a>
+        <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="icon-btn icon-btn--wa" aria-label="Escribir por WhatsApp">
+          <svg class="w-5 h-5"><use href="#i-wa"/></svg>
+        </a>
+        <a href="#cotizar" class="header-cta hidden md:inline-flex">
+          <svg class="w-5 h-5" aria-hidden="true"><use href="#i-list"/></svg>
+          Cotizar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10 sm:pt-12 lg:grid lg:grid-cols-12 lg:gap-10 lg:items-center">
+
+        <div class="lg:col-span-7">
+          <div class="flex flex-wrap items-center gap-2 mb-5 reveal">
+            <span class="pill pill--green"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-store"/></svg>Por mayor</span>
+            <span class="pill pill--purple"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-home"/></svg>Al detalle</span>
+          </div>
+
+          <h1 class="hero-title reveal">
+            <span class="block">Seitán</span>
+            <span class="block">artesanal</span>
+            <span class="block hero-title__row">
+              <span class="text-outline">100%</span>
+              <span class="sticker lg:hidden" aria-hidden="true">
+                <svg viewBox="0 0 100 100" class="sticker__ring">
+                  <defs><path id="circlePathM" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+                  <text textLength="236" lengthAdjust="spacing"><textPath href="#circlePathM" textLength="236" lengthAdjust="spacing">HECHO A MANO • POR MAYOR Y AL DETALLE • </textPath></text>
+                </svg>
+                <img src="assets/images/logo.png" alt="" class="sticker__logo" width="64" height="64">
+              </span>
+            </span>
+            <span class="block text-neonGreen hero-title__accent">vegano</span>
+          </h1>
+
+          <p class="text-slate-300 text-[17px] sm:text-xl leading-relaxed max-w-xl mt-5 reveal">
+            Hacemos seitán artesanal para restaurantes, cafeterías y para tu cocina. Laminado, en medallones, rub o parrillero, en paquetes de 0,5, 1 y 3 kg.
+          </p>
+
+          <div class="mt-7 grid grid-cols-1 sm:flex gap-3 reveal">
+            <a href="#cotizar" class="btn btn--primary">
+              <svg class="w-5 h-5" aria-hidden="true"><use href="#i-list"/></svg>
+              Pedir cotización
+            </a>
+            <a href="#formatos" class="btn btn--ghost">
+              Ver formatos
+              <svg class="w-5 h-5" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+          </div>
+
+          <dl class="stats reveal">
+            <div><dt>Ingredientes animales</dt><dd class="text-neonGreen">0</dd></div>
+            <div><dt>Receta</dt><dd>Propia</dd></div>
+            <div><dt>Formatos</dt><dd class="text-purpleLight">4</dd></div>
+          </dl>
+        </div>
+
+        <div class="hidden lg:flex lg:col-span-5 justify-center">
+          <div class="hero-visual">
+            <svg viewBox="0 0 100 100" class="hero-visual__ring" aria-hidden="true">
+              <defs><path id="circlePathD" d="M50,50 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+              <text textLength="274" lengthAdjust="spacing"><textPath href="#circlePathD" textLength="274" lengthAdjust="spacing">SEITÁN ARTESANAL • POR MAYOR Y AL DETALLE • </textPath></text>
+            </svg>
+            <img src="assets/images/logo.png" alt="Logo de Barbas Vegan" class="hero-visual__logo" width="320" height="320">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TILTED TICKER ===================== -->
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker ticker--green">
+        <div class="ticker__track">
+          <span>Seitán artesanal</span><i>✺</i><span>Laminado</span><i>✺</i><span>Medallones</span><i>✺</i><span>Rub</span><i>✺</i><span>Parrillero</span><i>✺</i><span>100% vegano</span><i>✺</i>
+          <span>Seitán artesanal</span><i>✺</i><span>Laminado</span><i>✺</i><span>Medallones</span><i>✺</i><span>Rub</span><i>✺</i><span>Parrillero</span><i>✺</i><span>100% vegano</span><i>✺</i>
+        </div>
+      </div>
+      <div class="ticker ticker--purple">
+        <div class="ticker__track ticker__track--reverse">
+          <span>Para restaurantes</span><i>✺</i><span>Para cafeterías</span><i>✺</i><span>Para tu cocina</span><i>✺</i><span>Hecho en Santiago</span><i>✺</i><span>Cero crueldad</span><i>✺</i>
+          <span>Para restaurantes</span><i>✺</i><span>Para cafeterías</span><i>✺</i><span>Para tu cocina</span><i>✺</i><span>Hecho en Santiago</span><i>✺</i><span>Cero crueldad</span><i>✺</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== FORMATOS ===================== -->
+    <section id="formatos" class="section pt-14" aria-labelledby="formatos-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Nuestro seitán</p>
+          <h2 class="section-title" id="formatos-title">Elige el<br><span class="text-neonGreen">formato</span></h2>
+          <p class="text-slate-300 text-[15px] sm:text-base mt-3 max-w-2xl leading-relaxed">
+            El mismo seitán artesanal que preparamos para el food truck. El precio depende de la cantidad y el formato, así que te cotizamos según lo que necesites.
+          </p>
+        </div>
+
+        <div class="format-grid" id="format-grid"></div>
+
+        <div class="ideas reveal" id="seitan-sizes" aria-label="Tamaños de paquete"></div>
+
+        <div class="ideas reveal" id="seitan-ideas" aria-label="Ideas para prepararlo"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PARA QUIÉN ===================== -->
+    <section id="para-quien" class="section" aria-labelledby="para-quien-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Por mayor o al detalle</p>
+          <h2 class="section-title" id="para-quien-title">¿Para quién<br>es?</h2>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card audience-card--green reveal">
+            <span class="audience-card__icon"><svg aria-hidden="true"><use href="#i-store"/></svg></span>
+            <h3 class="audience-card__title">Restaurantes y locales</h3>
+            <ul class="audience-card__list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Compras por mayor</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Formatos pensados para tu cocina</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pedidos una vez o de forma periódica</li>
+            </ul>
+            <a href="#cotizar" class="btn btn--dark" data-quote-type="local">
+              Cotizar para mi local
+              <svg class="w-5 h-5" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="audience-card reveal">
+            <span class="audience-card__icon audience-card__icon--purple"><svg aria-hidden="true"><use href="#i-home"/></svg></span>
+            <h3 class="audience-card__title">Para tu cocina</h3>
+            <ul class="audience-card__list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Compra al detalle</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>El mismo seitán del food truck</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Te contactamos para coordinar</li>
+            </ul>
+            <a href="#cotizar" class="btn btn--ghost" data-quote-type="persona">
+              Cotizar para mí
+              <svg class="w-5 h-5" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COTIZAR (FORM) ===================== -->
+    <section id="cotizar" class="section" aria-labelledby="cotizar-title" tabindex="-1">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Sin compromiso</p>
+          <h2 class="section-title" id="cotizar-title">Pide tu<br><span class="text-neonGreen">cotización</span></h2>
+        </div>
+
+        <ol class="steps reveal" aria-label="Cómo funciona">
+          <li><span>1</span>Completa el formulario</li>
+          <li><span>2</span>Se envía por WhatsApp</li>
+          <li><span>3</span>Te contactamos con precio y disponibilidad</li>
+        </ol>
+
+        <form id="quote-form" class="quote-form" novalidate>
+          <div id="form-errors" class="form-errors hidden" role="alert" tabindex="-1"></div>
+
+          <!-- 1. Tipo de cliente -->
+          <fieldset class="form-block">
+            <legend class="form-block__legend"><span>1</span>¿Para quién es?</legend>
+            <div class="choice-grid" id="field-tipo" aria-describedby="error-tipo">
+              <label class="choice-card">
+                <input type="radio" name="tipo" value="persona">
+                <span class="choice-card__icon"><svg aria-hidden="true"><use href="#i-home"/></svg></span>
+                <span class="choice-card__text"><b>Para mí</b><small>Compra al detalle</small></span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="tipo" value="local">
+                <span class="choice-card__icon"><svg aria-hidden="true"><use href="#i-store"/></svg></span>
+                <span class="choice-card__text"><b>Para un local</b><small>Restaurante, café, tienda</small></span>
+              </label>
+            </div>
+            <p class="field-error hidden" id="error-tipo"></p>
+
+            <div class="local-fields hidden" id="local-fields">
+              <div class="field-wrap">
+                <label class="field-label" for="local-name">Nombre del local <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="local-name" name="local" class="field" autocomplete="organization" aria-describedby="error-local-name">
+                <p class="field-error hidden" id="error-local-name"></p>
+              </div>
+              <div class="field-wrap">
+                <p class="field-label" id="freq-label">¿Cada cuánto comprarías? <span class="opt">(opcional)</span></p>
+                <div class="chip-group" role="radiogroup" aria-labelledby="freq-label" id="freq-options"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 2. Pedido -->
+          <fieldset class="form-block">
+            <legend class="form-block__legend"><span>2</span>¿Qué necesitas?</legend>
+
+            <p class="field-label" id="formats-label">Formatos y cantidades <span class="req" aria-hidden="true">*</span></p>
+            <p class="field-hint -mt-1 mb-3">Marca uno o más formatos e indica cuántos paquetes quieres de cada tamaño.</p>
+            <div class="fmt-list" id="format-options" role="group" aria-labelledby="formats-label" aria-describedby="error-formats"></div>
+            <p class="field-error hidden" id="error-formats"></p>
+          </fieldset>
+
+          <!-- 3. Contacto -->
+          <fieldset class="form-block">
+            <legend class="form-block__legend"><span>3</span>Tus datos de contacto</legend>
+
+            <div class="grid grid-cols-2 gap-x-3">
+              <div class="field-wrap">
+                <label class="field-label" for="contact-name">Nombre <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" name="nombre" class="field" autocomplete="given-name" aria-describedby="error-contact-name">
+                <p class="field-error hidden" id="error-contact-name"></p>
+              </div>
+              <div class="field-wrap">
+                <label class="field-label" for="contact-lastname">Apellido <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="contact-lastname" name="apellido" class="field" autocomplete="family-name" aria-describedby="error-contact-lastname">
+                <p class="field-error hidden" id="error-contact-lastname"></p>
+              </div>
+            </div>
+
+            <div class="field-wrap">
+              <label class="field-label" for="contact-phone">Teléfono / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="contact-phone" name="telefono" class="field" autocomplete="tel" inputmode="tel" placeholder="+56 9 1234 5678" aria-describedby="hint-phone error-contact-phone">
+              <p class="field-hint" id="hint-phone">Por aquí te contactaremos con la cotización.</p>
+              <p class="field-error hidden" id="error-contact-phone"></p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-x-3">
+              <div class="field-wrap">
+                <label class="field-label" for="contact-email">Correo <span class="opt">(opcional)</span></label>
+                <input type="email" id="contact-email" name="correo" class="field" autocomplete="email" inputmode="email" aria-describedby="error-contact-email">
+                <p class="field-error hidden" id="error-contact-email"></p>
+              </div>
+              <div class="field-wrap">
+                <label class="field-label" for="contact-comuna">Comuna <span class="opt">(opcional)</span></label>
+                <input type="text" id="contact-comuna" name="comuna" class="field" autocomplete="address-level2">
+              </div>
+            </div>
+
+            <div class="field-wrap">
+              <label class="field-label" for="comments">Comentarios <span class="opt">(opcional)</span></label>
+              <textarea id="comments" name="comentarios" class="field field--area" rows="3" placeholder="Ej: lo necesito para el viernes, corte más delgado…"></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn-whatsapp-order">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Enviar por WhatsApp</span>
+          </button>
+          <p class="text-[13px] text-center text-slate-400 mt-3">Se abrirá WhatsApp con tu solicitud lista para enviar.</p>
+
+          <div id="form-success" class="form-success hidden" role="status" tabindex="-1">
+            <span class="form-success__icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+            <div>
+              <p class="font-display font-bold text-white">¡Solicitud lista!</p>
+              <p class="text-sm text-emerald-100/80 mt-1">Envía el mensaje en WhatsApp y Barbas Vegan te contactará con el precio y la disponibilidad.</p>
+              <a href="#" id="reopen-whatsapp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-3 text-sm font-bold text-neonGreen underline underline-offset-4">¿No se abrió WhatsApp? Ábrelo aquí</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== MANIFIESTO / BENTO ===================== -->
+    <section id="manifiesto" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Nuestra filosofía</p>
+          <h2 class="section-title">Comer consciente,<br><span class="text-neonGreen">sin perder el sabor</span></h2>
+        </div>
+
+        <div class="bento">
+          <div class="bento__tile bento__tile--hero reveal">
+            <svg class="w-8 h-8 text-black/80" aria-hidden="true"><use href="#i-heart"/></svg>
+            <p class="bento__big">0% animal<br>100% sabor</p>
+            <p class="text-black/75 text-[15px] font-semibold leading-snug">Proteína vegetal hecha a mano, completamente libre de crueldad animal.</p>
+          </div>
+
+          <div class="bento__tile bento__tile--purple reveal">
+            <svg class="w-7 h-7 text-purpleLight" aria-hidden="true"><use href="#i-flame"/></svg>
+            <p class="bento__label">Receta propia</p>
+            <p class="text-slate-300 text-sm leading-snug">La misma que usamos en el food truck, sazonada para que quede jugosa.</p>
+          </div>
+
+          <div class="bento__tile reveal">
+            <svg class="w-7 h-7 text-neonGreen" aria-hidden="true"><use href="#i-sprout"/></svg>
+            <p class="bento__label">Hecho a mano</p>
+            <p class="text-slate-300 text-sm leading-snug">Preparado artesanalmente en cada tanda, con dedicación.</p>
+          </div>
+
+          <div class="bento__tile bento__tile--outline reveal">
+            <p class="bento__num">Versátil</p>
+            <p class="text-slate-300 text-sm leading-snug">A la plancha, en guiso, apanado o mechado: se adapta a tu receta.</p>
+          </div>
+
+          <div class="bento__tile bento__tile--quote reveal">
+            <p class="font-display font-bold text-lg sm:text-xl leading-snug text-white">“Queremos que más cocinas tengan una proteína vegetal rica, contundente y hecha con cariño.”</p>
+            <p class="text-sm text-slate-400 mt-3 font-semibold">— Equipo Barbas Vegan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== UBICACIÓN ===================== -->
+    <section id="ubicacion" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-6 reveal">
+          <p class="eyebrow">Dónde estamos</p>
+          <h2 class="section-title">Visítanos en<br>el food truck</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+
+          <div class="lg:col-span-7 lg:order-2 map-card reveal">
+            <iframe
+              title="Ubicación de Barbas Vegan en Google Maps"
+              src="https://maps.google.com/maps?q=-33.5090364,-70.7569641&z=16&hl=es&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+            <div class="map-card__bar">
+              <div class="min-w-0">
+                <p class="font-bold text-white text-sm truncate">Barbas Vegan</p>
+                <p class="text-slate-400 text-xs">Santiago, Chile</p>
+              </div>
+              <a href="https://www.google.com/maps/place/Barbas+Vegan/@-33.5090319,-70.759539,946m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9662ddf115c2b09f:0x824d7de96b1cfdf0!8m2!3d-33.5090364!4d-70.7569641!16s%2Fg%2F11qfqvmzd8?hl=es-419" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                <svg class="w-4 h-4" aria-hidden="true"><use href="#i-nav"/></svg>
+                Cómo llegar
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 lg:order-1 space-y-4">
+            <div class="info-card reveal">
+              <div class="flex items-center justify-between gap-3 mb-3">
+                <h3 class="info-card__title"><svg class="w-5 h-5 text-neonGreen" aria-hidden="true"><use href="#i-clock"/></svg>Horario</h3>
+                <span class="status-chip status-chip--lg" data-open-chip>
+                  <span class="status-dot" data-open-dot></span>
+                  <span data-open-status>—</span>
+                </span>
+              </div>
+              <dl class="hours">
+                <div data-days="1,2,3,4,5"><dt>Lunes a viernes</dt><dd>12:00 – 20:00</dd></div>
+                <div data-days="6"><dt>Sábado</dt><dd>13:00 – 17:00</dd></div>
+                <div data-days="0"><dt>Domingo</dt><dd class="text-slate-500">Cerrado</dd></div>
+              </dl>
+            </div>
+
+            <div class="info-card reveal">
+              <h3 class="info-card__title mb-2"><svg class="w-5 h-5 text-purpleLight" aria-hidden="true"><use href="#i-card"/></svg>Medios de pago</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="pill">Efectivo</span>
+                <span class="pill">Transferencia</span>
+                <span class="pill">Débito</span>
+                <span class="pill">Crédito</span>
+              </div>
+            </div>
+
+            <div class="info-card reveal">
+              <h3 class="info-card__title mb-3">Síguenos</h3>
+              <div class="social-grid">
+                <a href="https://instagram.com/barbasvegan" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram de Barbas Vegan (se abre en otra pestaña)">
+                  <svg aria-hidden="true"><use href="#i-insta"/></svg><span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/BarbasVegan/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook de Barbas Vegan (se abre en otra pestaña)">
+                  <svg aria-hidden="true"><use href="#i-facebook"/></svg><span>Facebook</span>
+                </a>
+                <a href="https://www.tiktok.com/@barbasvegan" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok de Barbas Vegan (se abre en otra pestaña)">
+                  <svg aria-hidden="true"><use href="#i-tiktok"/></svg><span>TikTok</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="info-card reveal hidden" id="delivery-card">
+              <h3 class="info-card__title">¿Con hambre? Pide del food truck</h3>
+              <p class="text-slate-400 text-sm mt-1 mb-3">Sándwiches y más, a domicilio.</p>
+              <div class="delivery-grid" id="delivery-links"></div>
+            </div>
+
+            <a href="https://wa.me/56912345678?text=Hola%20Barbas%20Vegan!%20Tengo%20una%20consulta%20sobre%20el%20seit%C3%A1n" target="_blank" rel="noopener noreferrer" class="wa-card reveal">
+              <span class="wa-card__icon"><svg class="w-6 h-6" aria-hidden="true"><use href="#i-wa"/></svg></span>
+              <span class="flex-1 min-w-0">
+                <span class="block font-display font-bold text-white">¿Tienes dudas?</span>
+                <span class="block text-sm text-emerald-100/80">Escríbenos por WhatsApp</span>
+              </span>
+              <svg class="w-5 h-5 text-white shrink-0" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="footer-mega" aria-hidden="true">BARBAS<span class="text-neonGreen">.</span>VEGAN</p>
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-6 border-t border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="" width="44" height="44" class="w-11 h-11 rounded-xl" loading="lazy">
+          <div>
+            <p class="font-display font-bold text-white">Barbas Vegan</p>
+            <p class="text-slate-400 text-sm">Seitán artesanal 100% vegano</p>
+          </div>
+        </div>
+        <nav class="grid grid-cols-2 sm:flex gap-2 text-sm font-semibold" aria-label="Pie de página">
+          <a href="#formatos" class="footer-link">Formatos</a>
+          <a href="#cotizar" class="footer-link">Cotizar</a>
+          <a href="https://instagram.com/barbasvegan" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+          <a href="https://www.facebook.com/BarbasVegan/" target="_blank" rel="noopener noreferrer" class="footer-link">Facebook</a>
+          <a href="https://www.tiktok.com/@barbasvegan" target="_blank" rel="noopener noreferrer" class="footer-link">TikTok</a>
+          <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp</a>
+        </nav>
+      </div>
+      <p class="text-slate-500 text-xs mt-6">© 2026 Barbas Vegan. Seitán artesanal plant-based.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== MOBILE DOCK ===================== -->
+  <nav class="dock md:hidden" aria-label="Navegación rápida">
+    <a href="#inicio" class="dock__item" data-spy="inicio">
+      <svg aria-hidden="true"><use href="#i-leaf"/></svg><span>Inicio</span>
+    </a>
+    <a href="#formatos" class="dock__item" data-spy="formatos">
+      <svg aria-hidden="true"><use href="#i-box"/></svg><span>Formatos</span>
+    </a>
+    <a href="#ubicacion" class="dock__item" data-spy="ubicacion">
+      <svg aria-hidden="true"><use href="#i-pin"/></svg><span>Mapa</span>
+    </a>
+    <a href="#cotizar" class="dock__cta" data-spy="cotizar">
+      <svg aria-hidden="true"><use href="#i-list"/></svg>
+      <span>Cotizar</span>
+    </a>
+  </nav>
+
+  <script src="js/site-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
